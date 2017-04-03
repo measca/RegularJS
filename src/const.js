@@ -6,13 +6,11 @@ module.exports = {
     svg: "http://www.w3.org/2000/svg"
   },
   'OPTIONS': {
-    'FORCE_STABLE': {force: true, stable: true},
-    'DEEP_STABLE': {deep: true, stable: true},
-    'STABLE_INIT': { stable: true, init: true },
-    'FORCE_INIT': { force: true, init: true },
-    'STABLE': {stable: true},
-    'INIT': { init: true },
-    'SYNC': { sync: true },
-    'FORCE': { force: true }
+    'STABLE_INIT': { stable: !0, init: !0 },
+    'FORCE_INIT': { force: !0, init: !0 },
+    'STABLE': {stable: !0},
+    'INIT': { init: !0 },
+    'SYNC': { sync: !0 },
+    'FORCE': { force: !0 }
   }
-};
+}

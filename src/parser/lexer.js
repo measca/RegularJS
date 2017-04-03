@@ -1,4 +1,4 @@
-var _ = require("../common/util.js");
+var _ = require("../util.js");
 var config = require("../config.js");
 
 // some custom tag  will conflict with the Lexer progress

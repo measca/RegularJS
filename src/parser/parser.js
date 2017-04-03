@@ -1,14 +1,15 @@
-var _ = require("../common/util.js");
+var _ = require("../util.js");
 
 var config = require("../config.js");
 var node = require("./node.js");
-var Lexer = require("./lexer.js");
-
+var Lexer = require("./Lexer.js");
 var varName = _.varName;
 var ctxName = _.ctxName;
 var extName = _.extName;
 var isPath = _.makePredicate("STRING IDENT NUMBER");
 var isKeyWord = _.makePredicate("true false undefined null this Array Date JSON Math NaN RegExp decodeURI decodeURIComponent encodeURI encodeURIComponent parseFloat parseInt Object");
+
+
 
 
 function Parser(input, opts){
