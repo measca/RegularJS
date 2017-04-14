@@ -29,12 +29,13 @@ _.extend = function( o1, o2, override ){
 
 _.extendDepth = function(o1, o2, override) {
   function extendDeep(parent, child) {
-    if(typeof parent == 'object'){
+    if(parent && typeof parent == 'object'){
       child = child || {};
+      if(Object.prototype.toString.call((parent)) == '[object Array]') child = [];
       for(var i in parent) {
             if(parent.hasOwnProperty(i)) {
                 //检测当前属性是否为对象
-                if(typeof parent[i] === "object") {
+                if(parent[i] && typeof parent[i] === "object" && !(parent[i] instanceof Date)) {
                     //如果当前属性为对象，还要检测它是否为数组
                     //这是因为数组的字面量表示和对象的字面量表示不同
                     //前者是[],而后者是{}
